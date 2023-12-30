@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Excternal CSS file linked -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External Script file linked -->
+    <script src="calculator.js"></script>
+
+    <!-- Bootstrap Packages imported -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+                <ul class="nav nav-tabs p-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Calculator</a>
+                    </li>
+                </ul>
+        </div>
+        <hr>
+        <div class="form-control p-5">
+            <h1 style="text-align: center;">JavaScript Calculator</h1>
+            <div class="row pt-5">
+                <div class="col-lg-4 p-2">
+                    <label class="pb-2" for="F_number">Enter First Operand :</label>
+                    <input class="form-control" type="number" name="F_number" id="firstvalue" value="0" oninput="valuenull()">
+                </div>
+                <div class="col-lg-4 p-2">
+                    <label class="pb-2" for="operator">Select Operator:</label>
+                    <select class="form-control" name="operator" id="op" onchange="valuenull()">
+                        <option value="" disabled selected>Select the operator</option>
+                        <option value="plus"> + </option>
+                        <option value="minus"> - </option>
+                        <option value="multiple"> * </option>
+                        <option value="divide"> / </option>
+                    </select>
+                </div>
+                <div class="col-lg-4 p-2">
+                    <label class="pb-2" for="S_number">Enter Second Operand :</label>
+                    <input class="form-control" type="number" name="S_number" id="secvalue" value="0" oninput="valuenull()">
+                </div>
+            </div>
+            <div class="row p-5">
+                <button class="p-2" type="submit" onclick="calc()">Calculate the values</button>
+            </div>
+            <div class="row p-3 w-50" style="margin-left: 25%;">
+                <label class="pb-2" for="answer">Answer :</label>
+                <input class="form-control" type="number" name="answer" value="0" id="ans" disabled style="font-weight: bold;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
